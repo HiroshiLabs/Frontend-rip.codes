@@ -1,7 +1,10 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import route from './router/index'
+import router from './routers/index'
+import VueAxios from 'vue-axios'
+import axios from 'axios'
+import './registerServiceWorker'
 
 
 
-createApp(App).use(route).mount('#app')
+createApp(App).use(router).use(VueAxios, axios).mount('#app')
